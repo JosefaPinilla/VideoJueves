@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385329168156",
+    "project_id": "videojueves-fc73c",
+    "storage_bucket": "videojueves-fc73c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385329168156:android:9137a078c1c8af49a404d9",
+        "android_client_info": {
+          "package_name": "com.example.video_jueves"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe04vZRtFf0-O1ZusZN44snz97GRq2X1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
