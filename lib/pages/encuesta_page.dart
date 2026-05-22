@@ -25,7 +25,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
   bool _isLoading = false;
 
-  // 🔧 DEVICE INFO (PAUTA)
+  // informacion a guardar
   Future<Map<String, dynamic>> getDeviceInfo() async {
     final deviceInfo = DeviceInfoPlugin();
 
@@ -72,7 +72,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                     children: [
 
-                      // TITULO
+                      // titulo
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -98,7 +98,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                       const SizedBox(height: 30),
 
-                      // P1
+                      // pregunta 1
                       const Text(
                         "¿Qué mensaje principal transmite el video?",
                         style: TextStyle(fontSize: 18),
@@ -107,7 +107,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                       const SizedBox(height: 20),
 
-                      // P2
+                      // pregunta 2
                       const Text(
                         "¿Cómo puede la Responsabilidad Social generar impacto?",
                         style: TextStyle(fontSize: 18),
@@ -116,7 +116,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                       const SizedBox(height: 20),
 
-                      // P3
+                      // pregunta 3
                       const Text(
                         "¿Te gustaría participar en iniciativas sostenibles?",
                         style: TextStyle(fontSize: 18),
@@ -125,7 +125,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                       const Spacer(),
 
-                      // BOTÓN
+                      // boton
                       SizedBox(
                         width: double.infinity,
                         height: 50,
@@ -152,10 +152,10 @@ class _EncuestaPageState extends State<EncuestaPage> {
                             setState(() => _isLoading = true);
 
                             try {
-                              // 📱 DEVICE INFO
+                              // info
                               final deviceData = await getDeviceInfo();
 
-                              // 🔥 FIRESTORE
+                              // firestore
                               await FirebaseFirestore.instance
                                   .collection('encuestas')
                                   .add({

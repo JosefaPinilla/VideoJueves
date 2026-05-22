@@ -50,7 +50,7 @@ class _InicioPageState extends State<InicioPage> {
           child: Column(
             children: [
 
-              // CONTENIDO PRINCIPAL
+              // contenido
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -75,7 +75,7 @@ class _InicioPageState extends State<InicioPage> {
 
                     children: [
 
-                      // LOGO
+                      // logo
                       Image.asset(
                         "assets/images/logo_fing.png",
                         height: 90,
@@ -83,7 +83,7 @@ class _InicioPageState extends State<InicioPage> {
 
                       const SizedBox(height: 35),
 
-                      // TITULO
+                      // titulo
                       const Text(
                         "Encuesta Académica\nUNACH Sostenible",
                         textAlign: TextAlign.center,
@@ -97,7 +97,7 @@ class _InicioPageState extends State<InicioPage> {
 
                       const SizedBox(height: 25),
 
-                      // DESCRIPCION
+                      // descripcion
                       const Text(
                         "La Universidad Adventista de Chile está desarrollando una encuesta relacionada con iniciativas de Responsabilidad Social Universitaria y sostenibilidad.\n\n"
                             "La información recopilada será utilizada exclusivamente con fines académicos y de investigación.",
@@ -113,7 +113,7 @@ class _InicioPageState extends State<InicioPage> {
 
                       const SizedBox(height: 35),
 
-                      // INDICADOR
+                      // indicador
                       const CircularProgressIndicator(),
 
                       const SizedBox(height: 18),
@@ -132,7 +132,6 @@ class _InicioPageState extends State<InicioPage> {
 
               const SizedBox(height: 18),
 
-              // BOTTOM NAVIGATION
               Container(
                 padding: const EdgeInsets.symmetric(
                   vertical: 14,

@@ -102,7 +102,7 @@ class _VideoPageState extends State<VideoPage> {
                   child: Column(
                     children: [
 
-                      // TITULO
+                      // titulo
                       Row(
                         mainAxisAlignment:
                         MainAxisAlignment.spaceBetween,
@@ -133,7 +133,7 @@ class _VideoPageState extends State<VideoPage> {
 
                       const SizedBox(height: 20),
 
-                      // VIDEO
+                      // video
                       Expanded(
                         child: Container(
                           width: double.infinity,
@@ -170,7 +170,7 @@ class _VideoPageState extends State<VideoPage> {
 
                       const SizedBox(height: 15),
 
-                      // DESCRIPCION
+                      // descripcion breve
                       const Text(
                         "La Responsabilidad Social Universitaria busca generar un impacto positivo y sostenible en la comunidad.",
                         textAlign: TextAlign.center,
@@ -182,7 +182,7 @@ class _VideoPageState extends State<VideoPage> {
 
                       const SizedBox(height: 20),
 
-                      // PLAY / PAUSE
+                      // play / pausa
                       Row(
                         mainAxisAlignment:
                         MainAxisAlignment.center,
@@ -236,7 +236,7 @@ class _VideoPageState extends State<VideoPage> {
 
                       const SizedBox(height: 20),
 
-                      // BOTON ENCUESTA
+                      // boton a encuesta
                       SizedBox(
                         width: double.infinity,
                         height: 50,
@@ -281,7 +281,6 @@ class _VideoPageState extends State<VideoPage> {
 
               const SizedBox(height: 15),
 
-              // NAVIGATION
               Container(
                 padding:
                 const EdgeInsets.symmetric(vertical: 10),

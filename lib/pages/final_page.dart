@@ -15,7 +15,6 @@ class FinalPage extends StatelessWidget {
           child: Column(
             children: [
 
-              // CARD PRINCIPAL
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -38,7 +37,6 @@ class FinalPage extends StatelessWidget {
 
                     children: [
 
-                      // ICONO PRINCIPAL
                       Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -76,7 +74,6 @@ class FinalPage extends StatelessWidget {
 
                       const SizedBox(height: 35),
 
-                      // BADGE
                       Container(
                         padding: const EdgeInsets.all(25),
                         decoration: BoxDecoration(
@@ -131,7 +128,6 @@ class FinalPage extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // BOTTOM NAV
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 12),
 
