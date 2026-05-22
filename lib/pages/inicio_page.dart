@@ -1,13 +1,47 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+
 import 'video_page.dart';
 
-class InicioPage extends StatelessWidget {
+class InicioPage extends StatefulWidget {
   const InicioPage({super.key});
 
   @override
+  State<InicioPage> createState() => _InicioPageState();
+}
+
+class _InicioPageState extends State<InicioPage> {
+
+  @override
+  void initState() {
+    super.initState();
+
+    iniciarPantalla();
+  }
+
+  Future<void> iniciarPantalla() async {
+
+    await Future.delayed(
+      const Duration(seconds: 5),
+    );
+
+    if (mounted) {
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const VideoPage(),
+        ),
+      );
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2),
+      backgroundColor: const Color(0xFFF3F5F7),
 
       body: SafeArea(
         child: Padding(
@@ -16,91 +50,79 @@ class InicioPage extends StatelessWidget {
           child: Column(
             children: [
 
-              // TARJETA PRINCIPAL
+              // CONTENIDO PRINCIPAL
               Expanded(
                 child: Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(28),
 
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(30),
+
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.05),
+                        blurRadius: 15,
+                        offset: const Offset(0, 5),
+                      ),
+                    ],
                   ),
 
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment:
+                    MainAxisAlignment.center,
+
                     children: [
 
-                      // LOGO FACULTAD
-                      Center(
-                        child: Image.asset(
-                          "assets/images/logo_fing.png",
-                          height: 80,
-                        ),
+                      // LOGO
+                      Image.asset(
+                        "assets/images/logo_fing.png",
+                        height: 90,
                       ),
 
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 35),
 
                       // TITULO
                       const Text(
-                        "Autorización para Uso de Datos – Encuesta Académica",
+                        "Encuesta Académica\nUNACH Sostenible",
+                        textAlign: TextAlign.center,
+
                         style: TextStyle(
+                          fontSize: 26,
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          height: 1.3,
                         ),
                       ),
 
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 25),
 
-                      // TEXTO
-                      const Expanded(
-                        child: SingleChildScrollView(
-                          child: Text(
-                            "La carrera de Ingeniería Comercial de la Universidad Adventista de Chile está realizando una encuesta con fines académicos.\n\n"
-                                "Solicitamos su consentimiento para recopilar algunos datos personales y de opinión, basándonos en un servicio de una serie de videos.\n\n"
-                                "La información será confidencial y utilizada únicamente para fines investigativos.\n\n"
-                                "Al continuar, usted acepta participar voluntariamente.",
-                            style: TextStyle(
-                              fontSize: 16,
-                              height: 1.5,
-                            ),
-                          ),
+                      // DESCRIPCION
+                      const Text(
+                        "La Universidad Adventista de Chile está desarrollando una encuesta relacionada con iniciativas de Responsabilidad Social Universitaria y sostenibilidad.\n\n"
+                            "La información recopilada será utilizada exclusivamente con fines académicos y de investigación.",
+
+                        textAlign: TextAlign.center,
+
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black87,
+                          height: 1.7,
                         ),
                       ),
 
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 35),
 
-                      // BOTON COMENZAR
-                      SizedBox(
-                        width: double.infinity,
-                        height: 50,
+                      // INDICADOR
+                      const CircularProgressIndicator(),
 
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                          ),
+                      const SizedBox(height: 18),
 
-                          onPressed: () {
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const VideoPage(),
-                              ),
-                            );
-
-                          },
-
-                          child: const Text(
-                            "Comenzar",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
-                          ),
+                      const Text(
+                        "Cargando contenido...",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black54,
                         ),
                       ),
                     ],
@@ -108,26 +130,61 @@ class InicioPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 15),
+              const SizedBox(height: 18),
 
               // BOTTOM NAVIGATION
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 14,
+                ),
 
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(25),
+
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.04),
+                      blurRadius: 10,
+                    ),
+                  ],
                 ),
 
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                child: const Row(
+                  mainAxisAlignment:
+                  MainAxisAlignment.spaceAround,
 
                   children: [
-                    Icon(Icons.home, color: Colors.blue),
-                    Icon(Icons.play_circle_fill, color: Colors.grey.shade400),
-                    Icon(Icons.assignment, color: Colors.grey.shade400),
-                    Icon(Icons.groups, color: Colors.grey.shade400),
-                    Icon(Icons.workspace_premium, color: Colors.grey.shade400),
+
+                    Icon(
+                      Icons.home,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+
+                    Icon(
+                      Icons.play_circle_fill,
+                      color: Colors.grey,
+                      size: 30,
+                    ),
+
+                    Icon(
+                      Icons.assignment,
+                      color: Colors.grey,
+                      size: 30,
+                    ),
+
+                    Icon(
+                      Icons.groups,
+                      color: Colors.grey,
+                      size: 30,
+                    ),
+
+                    Icon(
+                      Icons.workspace_premium,
+                      color: Colors.grey,
+                      size: 30,
+                    ),
                   ],
                 ),
               ),
