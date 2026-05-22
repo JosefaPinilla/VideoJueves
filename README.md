@@ -47,7 +47,7 @@ Datos almacenados en Firebase:
 ## Instalación y ejecución
 
 ### 1. Clonar el repositorio
-git clone https://github.com/usuario/video_jueves.git
+git clone https://github.com/JosefaPinilla/VideoJueves
 
 ### 2. Ingresar al proyecto
 cd video_jueves
