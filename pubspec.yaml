@@ -34,6 +34,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  video_player: ^2.10.0
+  firebase_core: ^4.9.0
+  cloud_firestore: ^6.4.1
+  device_info_plus: ^10.1.0
+  flutter_svg: ^2.0.10
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +64,8 @@ flutter:
 
   assets:
     - assets/images/logo_fing.png
-
+    - assets/videos/video_vcm.mp4
+    - assets/capturas/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
