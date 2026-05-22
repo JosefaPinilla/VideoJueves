@@ -98,7 +98,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                   // pregunta 1
                   const Text(
-                    "¿Qué mensaje principal transmite el video?",
+                    "¿Qué es un proyecto VCM?",
                     style: TextStyle(fontSize: 18),
                   ),
                   TextField(controller: pregunta1Controller),
@@ -107,7 +107,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                   // pregunta 2
                   const Text(
-                    "¿Cómo puede la Responsabilidad Social generar impacto?",
+                    "¿Cuál es el mejor proyecto?",
                     style: TextStyle(fontSize: 18),
                   ),
                   TextField(controller: pregunta2Controller),
@@ -116,7 +116,7 @@ class _EncuestaPageState extends State<EncuestaPage> {
 
                   // pregunta 3
                   const Text(
-                    "¿Te gustaría participar en iniciativas sostenibles?",
+                    "¿Cuál es el más complejo?",
                     style: TextStyle(fontSize: 18),
                   ),
                   TextField(controller: pregunta3Controller),

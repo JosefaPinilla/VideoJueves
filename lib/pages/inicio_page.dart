@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 import 'video_page.dart';
 
 class InicioPage extends StatefulWidget {
@@ -16,18 +14,15 @@ class _InicioPageState extends State<InicioPage> {
   @override
   void initState() {
     super.initState();
-
     iniciarPantalla();
   }
 
   Future<void> iniciarPantalla() async {
-
     await Future.delayed(
       const Duration(seconds: 5),
     );
 
     if (mounted) {
-
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -50,7 +45,6 @@ class _InicioPageState extends State<InicioPage> {
           child: Column(
             children: [
 
-              // contenido
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -69,63 +63,61 @@ class _InicioPageState extends State<InicioPage> {
                     ],
                   ),
 
-                  child: Column(
-                    mainAxisAlignment:
-                    MainAxisAlignment.center,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
 
-                    children: [
+                      children: [
 
-                      // logo
-                      Image.asset(
-                        "assets/images/logo_fing.png",
-                        height: 90,
-                      ),
-
-                      const SizedBox(height: 35),
-
-                      // titulo
-                      const Text(
-                        "Encuesta Académica\nUNACH Sostenible",
-                        textAlign: TextAlign.center,
-
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                          height: 1.3,
+                        Image.asset(
+                          "assets/images/logo_fing.png",
+                          height: 90,
                         ),
-                      ),
 
-                      const SizedBox(height: 25),
+                        const SizedBox(height: 35),
 
-                      // descripcion
-                      const Text(
-                        "La Universidad Adventista de Chile está desarrollando una encuesta relacionada con iniciativas de Responsabilidad Social Universitaria y sostenibilidad.\n\n"
-                            "La información recopilada será utilizada exclusivamente con fines académicos y de investigación.",
-
-                        textAlign: TextAlign.center,
-
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black87,
-                          height: 1.7,
+                        const Text(
+                          "Autorizacion para Uso de Datos – Encuesta Academica",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            height: 1.3,
+                          ),
                         ),
-                      ),
 
-                      const SizedBox(height: 35),
+                        const SizedBox(height: 25),
 
-                      // indicador
-                      const CircularProgressIndicator(),
-
-                      const SizedBox(height: 18),
-
-                      const Text(
-                        "Cargando contenido...",
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black54,
+                        const Text(
+                          "La carrera de Ingenieria Comercial de la Universidad Adventista de Chile esta realizando una encuesta con fines academicos. "
+                              "Solicitamos su consentimiento para recopilar algunos datos personales y de opinion, basandose en una serie de videos.\n\n"
+                              "Le aseguramos que toda la informacion sera confidencial, usada solo para este estudio y manejada segun la normativa de proteccion de datos.\n\n"
+                              "Al continuar, usted acepta participar voluntariamente y autoriza el uso de sus respuestas para fines investigativos.\n\n"
+                              "Gracias por su colaboracion.\n"
+                              "Carrera de Ingenieria Comercial – UNACH",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black87,
+                            height: 1.7,
+                          ),
                         ),
-                      ),
-                    ],
+
+                        const SizedBox(height: 35),
+
+                        const CircularProgressIndicator(),
+
+                        const SizedBox(height: 18),
+
+                        const Text(
+                          "Cargando contenido...",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -133,9 +125,7 @@ class _InicioPageState extends State<InicioPage> {
               const SizedBox(height: 18),
 
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 14,
-                ),
+                padding: const EdgeInsets.symmetric(vertical: 14),
 
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -150,40 +140,14 @@ class _InicioPageState extends State<InicioPage> {
                 ),
 
                 child: const Row(
-                  mainAxisAlignment:
-                  MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
 
                   children: [
-
-                    Icon(
-                      Icons.home,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-
-                    Icon(
-                      Icons.play_circle_fill,
-                      color: Colors.grey,
-                      size: 30,
-                    ),
-
-                    Icon(
-                      Icons.assignment,
-                      color: Colors.grey,
-                      size: 30,
-                    ),
-
-                    Icon(
-                      Icons.groups,
-                      color: Colors.grey,
-                      size: 30,
-                    ),
-
-                    Icon(
-                      Icons.workspace_premium,
-                      color: Colors.grey,
-                      size: 30,
-                    ),
+                    Icon(Icons.home, color: Colors.blue, size: 30),
+                    Icon(Icons.play_circle_fill, color: Colors.grey, size: 30),
+                    Icon(Icons.assignment, color: Colors.grey, size: 30),
+                    Icon(Icons.groups, color: Colors.grey, size: 30),
+                    Icon(Icons.workspace_premium, color: Colors.grey, size: 30),
                   ],
                 ),
               ),
