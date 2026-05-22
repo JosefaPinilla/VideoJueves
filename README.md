@@ -64,3 +64,11 @@ Asegurar que Firestore esté habilitado
 flutter run
 
 Al correr la app, estas ser´n las vistas
+### Inicio
+![Inicio](assets/capturas/inicio.png)
+### Video
+![Video](assets/capturas/video.png)
+### Encuesta
+![Encuesta](assets/capturas/encuesta.png)
+### Pantalla final
+![Final](assets/capturas/final.png)
