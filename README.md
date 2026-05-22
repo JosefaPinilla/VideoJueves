@@ -1,17 +1,74 @@
-# video_jueves
+# Video del Jueves - VCM
 
-A new Flutter project.
+## Descripcion del proyecto
+Aplicacion movil en Flutter para la asignatura Desarrollo Movil Multiplataforma. Permite visualizar un video, responder una encuesta y guardar datos en Firebase Firestore junto con informacion del dispositivo.
 
-## Getting Started
+## Objetivo
+Desarrollar una app que integre video, encuesta y almacenamiento en Firebase.
 
-This project is a starting point for a Flutter application.
+## Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+### Pantalla de inicio
+- Presentacion del proyecto
+- Logo institucional
+- Navegacion principal
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Pantalla de video
+- Reproduccion de video VCM
+- Carga automatica despues de 10 segundos
+- Controles play y pause
+- Boton de encuesta habilitado al finalizar el video
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Pantalla de encuesta
+Preguntas:
+- Que es un proyecto VCM
+- Cual es el mejor proyecto
+- Cual es el mas complejo
+
+Datos almacenados en Firebase:
+- Respuestas del usuario
+- Modelo del dispositivo
+- Sistema operativo
+- Fecha y hora
+
+### Pantalla final
+- Mensaje de felicitacion
+- Insignia del dia jueves
+- Elementos motivacionales
+
+## Tecnologias utilizadas
+- Flutter
+- Firebase Core
+- Cloud Firestore
+- video_player
+- device_info_plus
+- flutter_svg
+
+## Instalación y ejecución
+
+### 1. Clonar el repositorio
+git clone https://github.com/usuario/video_jueves.git
+
+### 2. Ingresar al proyecto
+cd video_jueves
+
+### 3. Instalar dependencias
+flutter pub get
+
+### 4. Configurar Firebase
+Agregar google-services.json en android/app/
+Verificar configuración en firebase_core
+Asegurar que Firestore esté habilitado
+
+### 5. Ejecutar la aplicación 
+flutter run
+
+Al correr la app, estas ser´n las vistas
+### Inicio
+![Inicio](assets/capturas/inicio.png)
+### Video
+![Video](assets/capturas/video.png)
+### Encuesta
+![Encuesta](assets/capturas/encuesta.png)
+### Pantalla final
+![Final](assets/capturas/final.png)
