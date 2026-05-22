@@ -21,9 +21,9 @@ Desarrollar una app que integre video, encuesta y almacenamiento en Firebase.
 
 ### Pantalla de encuesta
 Preguntas:
-- Que es un proyecto VCM
-- Cual es el mejor proyecto
-- Cual es el mas complejo
+- ¿Qué mensaje principal transmite el video?
+- ¿Cómo puede la Responsabilidad Social generar impacto?
+- ¿Te gustaría participar en iniciativas sostenibles?
 
 Datos almacenados en Firebase:
 - Respuestas del usuario
